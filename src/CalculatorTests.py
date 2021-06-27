@@ -17,6 +17,21 @@ class MyTestCase(unittest.TestCase):
             result = float(row['Result'])
             self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), result)
             self.assertEqual(self.calculator.result, result)
+            pprint(row)
+
+   # def test_multiplication(self):
+    #    testData = CsvReader("src/Multiplication.csv").data
+     #   for row in testData:
+      #      result = float(row['Result'])
+       #     self.assertEqual(self.calculator.multiply(row['Value 1'], row['Value 2']), result)
+        #    self.assertEqual(self.calculator.result, result)
+
+    #def test_subtraction(self):
+     #   testData = CsvReader("src/Subtraction.csv").data
+     #   for row in testData:
+      #      result = float(row['Result'])
+      #      self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), result)
+      #      self.assertEqual(self.calculator.result, result)
 
    # def test_results_property_calculator(self):
     #    self.assertEqual(self.calculator.result, 0)
