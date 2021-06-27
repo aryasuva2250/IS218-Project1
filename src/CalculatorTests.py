@@ -12,7 +12,7 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.calculator, Calculator)
     '''
     def test_addition(self):
-        testData = CsvReader("src/Addition.csv").data
+        testData = CsvReader("src/TestFiles/Addition.csv").data
         for row in testData:
             result = float(row['Result'])
             self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), result)
@@ -21,7 +21,7 @@ class MyTestCase(unittest.TestCase):
     '''
     '''
     def test_multiplication(self):
-        testData = CsvReader("src/Multiplication.csv").data
+        testData = CsvReader("src//TestFiles/Multiplication.csv").data
         for row in testData:
             result = float(row['Result'])
             self.assertEqual(self.calculator.multiply(row['Value 1'], row['Value 2']), result)
@@ -30,7 +30,7 @@ class MyTestCase(unittest.TestCase):
     '''
     '''
     def test_subtraction(self):
-        testData = CsvReader("src/Subtraction.csv").data
+        testData = CsvReader("src//TestFiles/Subtraction.csv").data
         for row in testData:
             result = float(row['Result'])
             self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), result)
@@ -39,7 +39,7 @@ class MyTestCase(unittest.TestCase):
     '''
     '''
     def test_square(self):
-        testData = CsvReader("src/Square.csv").data
+        testData = CsvReader("src//TestFiles/Square.csv").data
         for row in testData:
             result = float(row['Result'])
             self.assertEqual(self.calculator.squaring(row['Value 1']), result)
@@ -47,7 +47,7 @@ class MyTestCase(unittest.TestCase):
     '''
     '''
     def test_square_root(self):
-        testData = CsvReader("src/SquareRoot.csv").data
+        testData = CsvReader("src//TestFiles/SquareRoot.csv").data
         for row in testData:
             result = round(float(row['Result']), 8)
             self.assertEqual(self.calculator.sqrt(row['Value 1']), result)
@@ -57,7 +57,7 @@ class MyTestCase(unittest.TestCase):
     '''
 
     def test_division(self):
-        testData = CsvReader("src/Division.csv").data
+        testData = CsvReader("src//TestFiles/Division.csv").data
         for row in testData:
             result = round(float(row['Result']), 9)
             self.assertEqual(self.calculator.divide(row['Value 1'], row['Value 2']), result)
