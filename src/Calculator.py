@@ -1,6 +1,8 @@
 from addition import addition
 from multiplication import multiplication
 from subtraction import subtraction
+from division import division
+from square import square
 class Calculator:
 
     result = 0
@@ -19,5 +21,11 @@ class Calculator:
     def subtract(self, a, b):
         self.result = subtraction(a, b)
         return self.result
+    def squaring(self, a):
+        self.result = square(a)
+        return self.result
 
+    def divide(self, a, b):
+        self.result = division(a, b)
+        return self.result
 
