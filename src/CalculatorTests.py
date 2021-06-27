@@ -10,7 +10,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_instantiate_calculator(self): #tests the instanstiation of the calculator object
         self.assertIsInstance(self.calculator, Calculator)
-    '''
+
     def test_addition(self):
         testData = CsvReader("src/TestFiles/Addition.csv").data
         for row in testData:
@@ -18,7 +18,6 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), result)
             self.assertEqual(self.calculator.result, result)
             pprint(row)
-    '''
     '''
     def test_multiplication(self):
         testData = CsvReader("src//TestFiles/Multiplication.csv").data
@@ -55,15 +54,15 @@ class MyTestCase(unittest.TestCase):
             pprint(row)
 
     '''
-
+    '''
     def test_division(self):
         testData = CsvReader("src//TestFiles/Division.csv").data
         for row in testData:
             result = round(float(row['Result']), 9)
-            self.assertEqual(self.calculator.divide(row['Value 1'], row['Value 2']), result)
+            self.assertEqual((self.calculator.divide(row['Value 1'], row['Value 2'])), result)
             self.assertEqual(self.calculator.result, result)
             pprint(row)
-
+    '''
    # def test_results_property_calculator(self):
     #    self.assertEqual(self.calculator.result, 0)
    # def test_add_method_calculator(self):
