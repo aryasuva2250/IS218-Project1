@@ -14,7 +14,7 @@ class MyTestCase(unittest.TestCase):
         test_class = ClassFactory('person', self.csv_reader.data[0])
         for person in people:
             self.assertEqual(person.__name__, test_class.__name__ )
-
+'''
 class MyTestCase2(unittest.TestCase):
 
     def setUp(self) -> None:
@@ -75,7 +75,7 @@ class MyTestCase6(unittest.TestCase):
         test_class = ClassFactory('person', self.csv_reader.data[0])
         for person in people:
             self.assertEqual(person.__name__, test_class.__name__ )
-
+'''
 
 if __name__ == '__main__':
     unittest.main()
