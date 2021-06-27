@@ -37,14 +37,21 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.result, result)
             pprint(row)
     '''
+    '''
     def test_square(self):
         testData = CsvReader("src/Square.csv").data
         for row in testData:
             result = float(row['Result'])
             self.assertEqual(self.calculator.squaring(row['Value 1']), result)
             pprint(row)
-
-
+    '''
+    def test_square_root(self):
+        testData = CsvReader("src/SquareRoot.csv").data
+        for row in testData:
+            result = round(float(row['Result']), 8)
+            self.assertEqual(self.calculator.sqrt(row['Value 1']), result)
+            self.assertEqual(self.calculator.result, result)
+            pprint(row)
 
     '''
     def test_division(self):
