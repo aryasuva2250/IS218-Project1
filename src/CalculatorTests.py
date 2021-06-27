@@ -45,6 +45,7 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.squaring(row['Value 1']), result)
             pprint(row)
     '''
+    '''
     def test_square_root(self):
         testData = CsvReader("src/SquareRoot.csv").data
         for row in testData:
@@ -54,14 +55,14 @@ class MyTestCase(unittest.TestCase):
             pprint(row)
 
     '''
+
     def test_division(self):
         testData = CsvReader("src/Division.csv").data
         for row in testData:
-            result = float(row['Result'])
+            result = round(float(row['Result']), 9)
             self.assertEqual(self.calculator.divide(row['Value 1'], row['Value 2']), result)
             self.assertEqual(self.calculator.result, result)
             pprint(row)
-    '''
 
    # def test_results_property_calculator(self):
     #    self.assertEqual(self.calculator.result, 0)
