@@ -16,6 +16,9 @@ class CsvReader:
                 self.data.append(row)
         pass
 
+    def clear_data(self):
+        self.data.clear()
+
     def return_data_as_objects(self, class_name):
         objects = []
         for row in self.data:

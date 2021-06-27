@@ -4,9 +4,11 @@ from subtraction import subtraction
 from division import division
 from square import square
 from square_root import square_root
+
 class Calculator:
 
     result = 0
+
     def __init__(self):
         pass
 
@@ -21,7 +23,6 @@ class Calculator:
     def subtract(self, a, b):
         self.result = subtraction(a, b)
         return self.result
-
 
     def squaring(self, a):
         self.result = square(a)
