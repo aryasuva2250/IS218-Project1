@@ -12,11 +12,11 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.calculator, Calculator)
 
     def test_addition(self):
-        testData = CsvReader('datafileaddition.csv').data
+        testData = CsvReader("src/Addition.csv").data
         for row in testData:
-            r = float(row['Result'])
-            self.assertEqual(self.calculator.add(row['Val1'], row['Val2']), r)
-            self.assertEqual(self.calculator.r, r)
+            result = float(row['Result'])
+            self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), result)
+            self.assertEqual(self.calculator.result, result)
 
    # def test_results_property_calculator(self):
     #    self.assertEqual(self.calculator.result, 0)

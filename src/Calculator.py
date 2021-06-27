@@ -7,9 +7,10 @@ class Calculator:
     def __init__(self):
         pass
 
-    @staticmethod
+
     def add(self, a, b):
         self.result = addition(a, b)
         return self.result
+
 
 
