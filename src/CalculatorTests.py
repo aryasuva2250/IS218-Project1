@@ -19,7 +19,7 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.result, result)
             pprint(row)
     '''
-
+    '''
     def test_multiplication(self):
         testData = CsvReader("src/Multiplication.csv").data
         for row in testData:
@@ -27,8 +27,8 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.multiply(row['Value 1'], row['Value 2']), result)
             self.assertEqual(self.calculator.result, result)
             pprint(row)
-
     '''
+
     def test_subtraction(self):
         testData = CsvReader("src/Subtraction.csv").data
         for row in testData:
@@ -36,7 +36,7 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), result)
             self.assertEqual(self.calculator.result, result)
             pprint(row)
-    '''
+
    # def test_results_property_calculator(self):
     #    self.assertEqual(self.calculator.result, 0)
    # def test_add_method_calculator(self):
